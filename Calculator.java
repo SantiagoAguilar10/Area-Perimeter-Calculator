@@ -187,13 +187,11 @@ public class Calculator {
     private void pentagon() {
     System.out.println("\nPentagon");
 
-    // This can be done with just the side length, but apothem is included to facilitate calculations
+    // This can be done just with the side length
     double side = getDoubleInput("Enter side length: ");
-    double apothem = getDoubleInput("Enter apothem: ");
 
-    
     double perimeter = 5 * side;
-    double area = (perimeter * apothem) / 2;
+    double area = (1/4.0) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * side * side;
 
     System.out.println("Area: " + area);
     System.out.println("Perimeter: " + perimeter);
